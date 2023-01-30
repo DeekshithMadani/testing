@@ -14,6 +14,7 @@ then
         Minor=0
         Patch=0
 elif [[ "$Minor_update_flag" == "y" ]]
+then
         Minor=$((Minor+1))
         Patch=0
 else
@@ -21,5 +22,3 @@ else
 fi
 
 Tag="$Major.$Minor.$Patch"
-
-git tag Tag
