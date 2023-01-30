@@ -22,3 +22,5 @@ else
 fi
 
 Tag="v$Major.$Minor.$Patch"
+
+git tag $Tag
