@@ -21,6 +21,6 @@ else
         Patch=$((Patch+1))
 fi
 
-Tag="v$Major.$Minor.$Patch"
+Tag="$Major.$Minor.$Patch"
 
-git tag $Tag
+git tag Tag
