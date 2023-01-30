@@ -21,4 +21,4 @@ else
         Patch=$((Patch+1))
 fi
 
-Tag="$Major.$Minor.$Patch"
+Tag="v$Major.$Minor.$Patch"
