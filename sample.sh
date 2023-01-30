@@ -14,12 +14,13 @@ then
         Minor=0
         Patch=0
 elif [[ "$Minor_update_flag" == "y" ]]
+then
         Minor=$((Minor+1))
         Patch=0
 else
         Patch=$((Patch+1))
 fi
 
-Tag="$Major.$Minor.$Patch"
+Tag="v$Major.$Minor.$Patch"
 
-git tag Tag
+git tag $Tag
