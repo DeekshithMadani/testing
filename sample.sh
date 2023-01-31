@@ -40,5 +40,5 @@ then
     Tag="v$Major.$Minor.$Patch"
 
     git tag $Tag
-    echo "use git push --tags to push the tags to github"
+    git push --tags
 fi
