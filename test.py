@@ -4,4 +4,4 @@ app = FastAPI()
 
 @app.get('/')
 def run():
-  return {'data' : 'testing'}
+  return {'data' : 'testing code'}
