@@ -2,6 +2,7 @@
 
 
 old_tag_id=$(git rev-list --tags --max-count=1)
+echo $(git tag)
 
 if [[ "$old_tag_id" == "" ]]
 then
