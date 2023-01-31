@@ -35,3 +35,5 @@ jobs:
       run: |
         chmod +x ./sample.sh
         ./sample.sh
+    - name: Build the Docker image
+      run: docker build . --tag test_app:$(git describe --tags --abbrev=0s)
