@@ -3,6 +3,7 @@
 
 old_tag_id=$(git rev-list --tags --max-count=1)
 
+
 if [[ "$old_tag_id" == "" ]]
 then
         Major=0
