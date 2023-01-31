@@ -18,14 +18,11 @@ else
         echo $Patch
 fi
 
-echo "Version change required(y/n): "
-read version_update_flag
+version_update_flag="y"
 if [[ "$version_update_flag" == "y" ]]
 then
-    echo "Breaking change(y/n): "
-    read Major_update_flag
-    echo "Functionality update(y/n): "
-    read Minor_update_flag
+    Major_update_flag="y"
+    Minor_update_flag="y"
 
     if [[ "$Major_update_flag" == "y" ]]
     then
