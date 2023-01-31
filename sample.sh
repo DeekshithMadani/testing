@@ -39,6 +39,7 @@ then
 
     Tag="v$Major.$Minor.$Patch"
 
+
     git tag $Tag
     git push origin $Tag
 fi
