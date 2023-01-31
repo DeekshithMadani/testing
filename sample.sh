@@ -2,6 +2,7 @@
 
 
 old_tag_id=$(git ls-remote --tags )
+echo $old_tag_id
 
 
 if [[ "$old_tag_id" == "" ]]
