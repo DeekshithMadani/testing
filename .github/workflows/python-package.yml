@@ -53,5 +53,5 @@ jobs:
       with:
         context: .
         push: true
-        tags: test_app:latest
+        tags: deekshithmadani123/test_app:latest
     
