@@ -1,8 +1,7 @@
 #!/bin/bash
 
 
-old_tag_id=$(git rev-list  --tags --max-count=1)
-echo $(git ls-remote --tags )
+old_tag_id=$(git ls-remote --tags )
 
 
 if [[ "$old_tag_id" == "" ]]
@@ -11,7 +10,7 @@ then
         Minor=0
         Patch=0
 else
-        old_tag=$(git describe --tags $(git rev-list --tags --max-count=1))
+        old_tag=$(echo $(git ls-remote --tags) | rev | cut -d '/' -f 1 | rev)
         Major=$(echo $old_tag | cut -d '.' -f1 | awk '{print substr($0, 2)}' )
         Minor=$(echo $old_tag | cut -d '.' -f2 )
         Patch=$(echo $old_tag | cut -d '.' -f3 )
