@@ -1,9 +1,5 @@
 #!/bin/bash
 
-# Redirect output to stderr.
-exec 1>&2
-# enable user input
-exec < /dev/tty
 
 old_tag_id=$(git rev-list --tags --max-count=1)
 
