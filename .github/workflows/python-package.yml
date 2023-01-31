@@ -29,10 +29,6 @@ jobs:
         python -m pip install --upgrade pip
         python -m pip install flake8 pytest
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
-    - name: Run shell script
-      run: |
-        chmod +x ./sample.sh
-        ./sample.sh
     - name: GitHub Tag Name example
       run: |
        echo "Tag name from GITHUB_REF_NAME: $GITHUB_REF_NAME"
