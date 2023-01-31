@@ -3,7 +3,7 @@
 . ./config.sh
 
 
-old_tag_id=$(git ls-remote --tags --sort='-v:refname')
+old_tag_id=$(git ls-remote --tags --sort='v:refname')
 echo $old_tag_id
 
 
