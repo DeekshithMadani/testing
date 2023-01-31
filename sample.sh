@@ -13,7 +13,7 @@ then
         Minor=0
         Patch=0
 else
-        old_tag=$(echo $(git ls-remote --tags) | rev | cut -d '/' -f 1 | rev)
+        old_tag=$(echo $(git ls-remote --tags --sort='v:refname') | rev | cut -d '/' -f 1 | rev)
         Major=$(echo $old_tag | cut -d '.' -f1 | awk '{print substr($0, 2)}' )
         Minor=$(echo $old_tag | cut -d '.' -f2 )
         Patch=$(echo $old_tag | cut -d '.' -f3 )
