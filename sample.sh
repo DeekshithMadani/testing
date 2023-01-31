@@ -1,5 +1,7 @@
 #!/bin/bash
 
+. ./config.sh
+
 
 old_tag_id=$(git ls-remote --tags )
 echo $old_tag_id
@@ -20,11 +22,8 @@ else
         echo $Patch
 fi
 
-version_update_flag="y"
 if [[ "$version_update_flag" == "y" ]]
 then
-    Major_update_flag="y"
-    Minor_update_flag="y"
 
     if [[ "$Major_update_flag" == "y" ]]
     then
