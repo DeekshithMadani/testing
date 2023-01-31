@@ -1,7 +1,8 @@
 #!/bin/bash
 
 
-old_tag_id=$(git rev-list ls-remote --tags --max-count=1)
+old_tag_id=$(git rev-list  --tags --max-count=1)
+echo $(git ls-remote --tags )
 
 
 if [[ "$old_tag_id" == "" ]]
