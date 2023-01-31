@@ -35,6 +35,7 @@ jobs:
       run: |
         chmod +x ./sample.sh
         ./sample.sh
+        current_tag=$(git describe --tags --abbrev=0)
     - name: Log in to Docker Hub
       uses: docker/login-action@f054a8b539a109f9f41c372932f1ae047eff08c9
       with:
@@ -52,5 +53,5 @@ jobs:
       with:
         context: .
         push: true
-        tags: deekshithmadani123/test_app:$(git describe --tags --abbrev=0)
+        tags: deekshithmadani123/test_app:$current_tag
     
